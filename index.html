@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster, de kat - spel</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        @import url("https://use.typekit.net/jue7jjm.css");
+      </style>
+</head>
+<body>
+    <div class="content-container">
+        <header>
+            <img src="./assets/pictures/hampiedoos.png" alt="Hamster verstopt" class="invisible" id="transform-random">
+            <img src="./assets/pictures/title.png" alt="title: hamster de kat - spel" class="title">
+            <img src="./assets/pictures/info.png" alt="info logo" class="info-icon" id="info-btn">
+        </header>
+        
+        <main>
+            <img src="./assets/pictures/hartjes_1.png" alt="Hartjes" id="hartjes" class="invisible">
+                <img src="./assets/pictures/hampie-zit.png" alt="Hamster zit" id="hamster" class="hamster">
+                <img src="./assets/pictures/praat.png" alt="Hamster zegt: meow meow" id= "praat" class="invisible">
+        </main>
+
+        <footer>
+            <div class="flex-container-footer">
+            <div class="honger">
+                <img src="./assets/pictures/honger.png" id= "honger" alt="Honger" class="honger">
+            </div>
+
+            <div class="acties">
+                <img src="./assets/pictures/vraag.png" id="vraag-btn" alt="Vraagteken voor quiz">
+
+                <img src="./assets/pictures/poot.png" alt="poot">
+
+                <div class="actie-item">
+                    <img src="./assets/pictures/aai.png"  id="aai-btn" alt="Handje">
+                    <p id="aai-counter"></p>
+                </div>
+                <div class="actie-item">
+                    <img src="./assets/pictures/tonijn.png" id="tonijn-btn" alt="Blikje tonijn">
+                    <p id="tonijn-counter">0</p>
+                </div>
+                <img src="./assets/pictures/wit_muis.png" id="muis-btn" class="muisje" alt="Wiet muisje">
+            </div>
+
+            <div class="honger">
+                <img src="./assets/pictures/genoeg.png" id= "genoeg" alt="Genoeg" class="invisible honger">
+            </div>
+        </div>
+        </footer>
+
+        <div id="info-modal" class="modal-backdrop invisible">
+            <article class="modal-background">
+                <div class="info-content">
+                 <img src="./assets/pictures/kruis.png" id="sluit-btn" class="sluit" alt="Sluit kruisje">
+                <h2>Spel gebasseerd op de liefste Hamster die ooit bestond <br> Voor Hamsters baasje, en mijn lief, Hanno</h2>
+                <img src="./assets/pictures/data.png" class="info-data" alt="01-06-2010 21-02-2025">
+                <div class="info-foto">
+                    <img src="./assets/pictures/ham-en-hanno.jpg" alt="Hamster en Hanno">
+                    <img src="./assets/pictures/hampie.jpg" alt="Hamster">
+                    <img src="./assets/pictures/ham-en-ik.jpg" alt="Hamster en Tot">
+                </div>
+                <p>We ontvangen donaties voor ons verdriet te troosten</p>
+            </div>
+            </article>
+        </div>
+
+        <div id="quiz-modal" class="modal-backdrop invisible">
+            <div class="modal-background">
+                <article class="quiz-content">
+                    <img src="./assets/pictures/kruis.png" id="sluit-btn" class="sluit" alt="Sluit kruisje">
+                    <img src="./assets/pictures/quiz.png" class="quiz-title" alt="Quiz title">
+            
+                    <div class="vraag">
+                        <h2>Hoe oud was Hamster?</h2>
+                        <input type="text" class="input" id="input-age" placeholder="....">
+                        <div id="result">
+                            <button class="button" id="button-age">?</button>
+                            <p id="result-age"></p>
+                        </div>
+                    </div>
+            
+                    <div class="vraag">
+                        <h2>Vind Hamster dit lekker?</h2>
+                        <div class="vragen-eten">
+                            <p id="input-eten"></p>
+                            <div class="buttons-eten">
+                                <button class="quiz-button ja" id="button-ja">JA</button>
+                                <button class="quiz-button nee" id="button-nee">NEE</button>
+                            </div>
+                        </div>
+                        <div class="result">
+                            <p id="result-eten"></p>
+                            <p id="result-eten-amount"></p>
+                        </div>
+                    </div>
+            
+                    <div class="vraag">
+                        <h2>Vindt hamster jou leuk?</h2>
+                        <input type="text" class="input" id="input-naam" placeholder="....">
+                        <div class="result">
+                            <button class="button" id="button-naam">?</button>
+                            <p id="result-naam"></p>
+                        </div>
+                        
+                    </div>
+                </article>               
+            </div>
+         </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

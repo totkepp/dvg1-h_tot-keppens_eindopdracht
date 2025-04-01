@@ -1,7 +1,17 @@
 const hamster = document.getElementById("hamster");
 
+// Handje -- Hamster verstopt
+const handBtn = document.getElementById("hand-btn");
+const hamsterDoos = document.getElementById("transform-random");
+
+let randomX = Math.floor(Math.random * width);
+let randomY = Math.floor(Math.random * height);
+
+handBtn.addEventListener("click", () => {
+
+})
+
 // Aai counter
-const hongerText = document.getElementById("hnger");
 const aaiBtn = document.getElementById("aai-btn");
 const aaiInpt = document.getElementById("aai-counter");
 const hartjes = document.getElementById("hartjes")
@@ -40,6 +50,54 @@ const aaiReset = () => {
  hartjes.src = "./assets/pictures/hartjes_1.png";
 }
 
+
+// Tonijn counter
+const hongerText = document.getElementById("honger");
+const genoegText = document.getElementById("genoeg");
+const tonijnBtn = document.getElementById("tonijn-btn");
+const tonijnInpt = document.getElementById("tonijn-counter");
+
+let tonijnCount = 0;
+let optelCounter = true;
+
+tonijnBtn.addEventListener("click", () => {
+  tonijnCount++
+  optelCounter = true;
+  tonijnInpt.innerHTML = tonijnCount;
+  tonijnFunctie();
+  optelCounterCheck();
+})
+
+// -- Functie die bepaald of Hamster honger heeft of niet
+const tonijnFunctie = () => {
+  if (tonijnCount === 0) {
+    optelCounter = true;
+  }
+  else if (tonijnCount > 10) {
+    hongerText.classList.add("invisible");
+    genoegText.classList.remove("invisible");
+    optelCounter = false;
+ } else if (tonijnCount < 10) {
+  hongerText.classList.remove("invisible");
+  genoegText.classList.add("invisible");
+  } 
+}
+
+// -- Timer die aftelt na 10 counters naar 0
+ const optelCounterCheck = () => {
+  if (optelCounter === false && tonijnCount > 1) {
+    setTimeout(() => {
+    tonijnCount--
+    tonijnInpt.innerHTML = tonijnCount;
+    tonijnFunctie();
+    }, 1000);
+  }
+ }
+
+//  -- Controleert de counter elke seconde
+ setInterval(optelCounterCheck, 1000);
+
+
 // Hamster praat
 const meowBubble = document.getElementById("praat"); 
 const audioMeow = new Audio('../assets/audio/hampie-meow.mp3');
@@ -55,6 +113,7 @@ setTimeout(() => {
 }, 3000);
 });
 
+
 // Muisje
 document.addEventListener("DOMContentLoaded", function () {
 const muisBtn = document.getElementById("muis-btn");
@@ -68,6 +127,7 @@ muisBtn.addEventListener("click", () => {
   }, 1000);
 })
 });
+
 
 // QUIZ
 // Vraag 1 - leeftijd

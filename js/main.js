@@ -2,13 +2,31 @@ const hamster = document.getElementById("hamster");
 
 // Handje -- Hamster verstopt
 const handBtn = document.getElementById("hand-btn");
-const hamsterDoos = document.getElementById("transform-random");
+const hamsterDoos = document.getElementById("hamster-doos");
 
-let randomX = Math.floor(Math.random * width);
-let randomY = Math.floor(Math.random * height);
+let hampieVisible = false;
+
+// -- Functie die zorgt dat Hamster random van plaats veranderd na elke klik
+const hamsterTranslate = () => {
+if (hampieVisible === true) {
+  const randomX = Math.random() * 1000;
+  const randomY = Math.random() * 500;
+  hamsterDoos.classList.remove("invisible");
+  hamster.classList.add("invisible");
+  hamsterDoos.style.transform = `translate(${randomX}px, ${randomY}px)`;
+} else if (hampieVisible === false) {
+  hamsterDoos.classList.add("invisible");
+  hamster.classList.remove("invisible");
+}}
 
 handBtn.addEventListener("click", () => {
+  hampieVisible = true;
+  hamsterTranslate();
+})
 
+hamsterDoos.addEventListener("click", () => {
+  hampieVisible = false;
+  hamsterTranslate();
 })
 
 // Aai counter
@@ -236,11 +254,13 @@ naamBtn.addEventListener("click", () => {
 
 
 // -- Functie die naam controleerd
+const juisteNamen = ["hanno", "tot", "eva", "lea", "wolf", "ilinka", "lisa", "robbe"];
+
 const hanno = "hanno";
 const tot = "tot";
 
 const checkNaam = (naam) => {
-if (naam === hanno || naam === tot) {
+if (juisteNamen.includes(naam)) {
   naamRslt.innerHTML = "Hamster vindt jou leuk!"
 }
 // -- Controleer hoe lang de input is

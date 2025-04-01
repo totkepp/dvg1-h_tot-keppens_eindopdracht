@@ -10,11 +10,11 @@ Als hulp maakte ik gebruik van
 - Stack overflow
 - W3 schools
 - Youtube
-- Heel soms MDN web docs
+- MDN web docs
 Hoe ik ze gebruikte was vooral voorbeelden van code en informatie + uitleg zoeken over onduidelijkheden en hoe ik bepaade functies beter liet werken.
 
 ChatGPT werd gebruikt als ik echt vast zat, om raad te vragen, leren & frustrerende code te debuggen.
-Mijn brein hielp ook met de kennis van vorige lessen, maar die liep wel vaak overuren..
+Mijn brein hielp ook met de kennis van vorige lessen.
 
 - Tekeningen zijn handgetekend en omgezet in illustrator
 - Background van unsplash (https://unsplash.com/photos/white-clouds-under-blue-sky-w4WU2PZ9bPg)

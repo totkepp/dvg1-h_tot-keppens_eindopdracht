@@ -60,6 +60,11 @@ header img {
   cursor: pointer;
 }
 
+#hamster-doos:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
 /* Main */
 Main {
   display: flex;

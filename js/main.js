@@ -115,7 +115,6 @@ const tonijnFunctie = () => {
 //  -- Controleert de counter elke seconde
  setInterval(optelCounterCheck, 1000);
 
-
 // Hamster praat
 const meowBubble = document.getElementById("praat"); 
 const audioMeow = new Audio('../assets/audio/hampie-meow.mp3');
@@ -187,7 +186,7 @@ const etenAmount = document.getElementById("result-eten-amount");
   naam: "Medicatie", isLust: false,
 }, {
   naam: "Katten snoepjes", isLust: true,
-}, 
+}
 ]
 
 let etenCount = 0;
@@ -209,7 +208,6 @@ quizBtn.forEach((button) => {
   toonEten();
 })
 });
-
 toonEten();
 
 // -- Functie toepassen op btns
@@ -222,12 +220,11 @@ neeBtn.addEventListener("click",() => {
 
 // -- Functie voor antwoord te controleren
 const checkIfLust = (checkBoolean) => {
+  huidigEten = eten[etenCount];
   // Check of er nog eten is
-  if (etenCount > 7) {
+  if (etenCount >= eten.length) {
     return;
   }
-
-  huidigEten = eten[etenCount];
 
   // Check of het juist of fout is
     if(huidigEten.isLust === checkBoolean) {

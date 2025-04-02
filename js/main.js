@@ -32,9 +32,9 @@ hamsterDoos.addEventListener("click", () => {
 // Aai counter
 const aaiBtn = document.getElementById("aai-btn");
 const aaiInpt = document.getElementById("aai-counter");
-const hartjes = document.getElementById("hartjes")
+const hartjes = document.getElementById("hartjes");
 
-const audioSpin = new Audio("./assets/audio/hampie-spin.mp3")
+const audioSpin = new Audio("./assets/audio/hampie-spin.mp3");
 let aaiCounter = 0;
 
 aaiBtn.addEventListener("click", () => {
@@ -129,7 +129,6 @@ setTimeout(() => {
   meowBubble.classList.add("invisible");
 }, 3000);
 });
-
 
 // Muisje
 document.addEventListener("DOMContentLoaded", function () {
@@ -252,9 +251,6 @@ naamBtn.addEventListener("click", () => {
 
 // -- Functie die naam controleerd
 const juisteNamen = ["hanno", "tot", "eva", "lea", "wolf", "ilinka", "lisa", "robbe"];
-
-const hanno = "hanno";
-const tot = "tot";
 
 const checkNaam = (naam) => {
 if (juisteNamen.includes(naam)) {

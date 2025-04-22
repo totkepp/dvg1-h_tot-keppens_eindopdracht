@@ -1,3 +1,6 @@
+### Pages
+https://totkepp.github.io/dvg1-h_tot-keppens_eindopdracht/
+
 ### Figma
 https://www.figma.com/design/nWhpK1q5FvEibhgpX6GBrn/dvg1-h_tot-keppens_eindopdracht?node-id=0-1&t=RmMrppsEONgK9VZ4-1
 
